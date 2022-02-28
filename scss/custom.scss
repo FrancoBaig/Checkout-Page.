@@ -1,4 +1,9 @@
+// Fuentes
 $p-font: 'Montserrat', sans-serif;
+
+// Colores
+ $title-color: #4E5150;
+
 
 * {
     padding: 0;
@@ -6,14 +11,24 @@ $p-font: 'Montserrat', sans-serif;
 }
 
 html {
-    font-size: 10px;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $p-font;
 }
 
 .container{
-    font-family: $p-font;
-    font-weight: 400;
+    width: 93.6%;
+    margin: 0 auto;
 
     .header {
-        font-size: 2.4rem;
+        margin: 3rem 0 2.4rem 0;
+        
+        .title {
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: $title-color;
+        }
     }
 }
