@@ -25,4 +25,23 @@ body {
   font-weight: 600;
   color: #4E5150;
 }
+
+.container .shipping {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[2] 1.5fr;
+      grid-template-rows: repeat(2, 1fr) 1.5fr;
+  background-color: #F2F2F2;
+}
+
+.container .shipping .card {
+  max-width: 266px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .shipping .card .card-img {
+  width: 30%;
+}
 /*# sourceMappingURL=custom.css.map */

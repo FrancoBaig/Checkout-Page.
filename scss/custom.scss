@@ -4,6 +4,8 @@ $p-font: 'Montserrat', sans-serif;
 // Colores
  $title-color: #4E5150;
 
+ $compra-color: #F2F2F2;
+
 
 * {
     padding: 0;
@@ -24,11 +26,27 @@ body {
 
     .header {
         margin: 3rem 0 2.4rem 0;
-        
+
         .title {
             font-size: 2.4rem;
             font-weight: 600;
             color: $title-color;
+        }
+    }
+    
+    .shipping {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr) 1.5fr;
+
+        background-color: $compra-color;
+
+        .card {
+            max-width: 266px;
+            display: flex;
+            
+            .card-img {
+                width: 30%;
+            }
         }
     }
 }
