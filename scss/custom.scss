@@ -6,6 +6,10 @@ $p-font: 'Montserrat', sans-serif;
 
  $compra-color: #F2F2F2;
 
+ $orange: #F2994A;
+
+$card-border-cl: #828282;
+
 
 * {
     padding: 0;
@@ -41,11 +45,81 @@ body {
         background-color: $compra-color;
 
         .card {
-            max-width: 266px;
+            max-width: 26.6rem;
             display: flex;
-            
+            justify-self: center;
+
+            margin: 1rem;
+            gap: 2rem;
+
             .card-img {
-                width: 30%;
+                min-width: 12.5rem;
+                border-radius: 13px;
+            }
+
+            .card-body {
+                .card-title {
+                    font-size: 1.2rem;
+                    color: $title-color;
+                }
+
+                .card-prices {
+                    display: flex;
+                    gap: 1.4rem;
+                    margin: 1.4rem 0 3.3rem 0;
+
+                    .discount-price{
+                        color: $orange;
+                        font-size: 1.4rem;
+                    }
+
+                    .full-price{
+                        align-self: center;
+                    }
+                }
+
+                .card-buttons{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    // Ancho y alto del recuadro de botones
+                    width: 12.5rem;
+                    height: 5rem;
+
+                    // Borde botones
+                    border: solid 1px $card-border-cl;
+                    border-radius: 12px;
+
+                    .card-btn {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        width: 2rem;
+                        height: 2rem;
+
+                        // Cambiar por variables
+                        border: none;
+                        background: #E0E0E0; 
+                        color: #828282;
+                    }
+
+                    .card-input{
+                        // flex: 1;
+
+                        .number-input {
+                            width: 3rem;
+                            background: transparent;
+                            border: none;
+                            text-align: center;
+
+                            &:focus{
+                                outline: none;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

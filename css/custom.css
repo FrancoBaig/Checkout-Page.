@@ -35,13 +35,85 @@ body {
 }
 
 .container .shipping .card {
-  max-width: 266px;
+  max-width: 26.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-self: center;
+  margin: 1rem;
+  gap: 2rem;
 }
 
 .container .shipping .card .card-img {
-  width: 30%;
+  min-width: 12.5rem;
+  border-radius: 13px;
+}
+
+.container .shipping .card .card-body .card-title {
+  font-size: 1.2rem;
+  color: #4E5150;
+}
+
+.container .shipping .card .card-body .card-prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.4rem;
+  margin: 1.4rem 0 3.3rem 0;
+}
+
+.container .shipping .card .card-body .card-prices .discount-price {
+  color: #F2994A;
+  font-size: 1.4rem;
+}
+
+.container .shipping .card .card-body .card-prices .full-price {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container .shipping .card .card-body .card-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 12.5rem;
+  height: 5rem;
+  border: solid 1px #828282;
+  border-radius: 12px;
+}
+
+.container .shipping .card .card-body .card-buttons .card-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: #E0E0E0;
+  color: #828282;
+}
+
+.container .shipping .card .card-body .card-buttons .card-input .number-input {
+  width: 3rem;
+  background: transparent;
+  border: none;
+  text-align: center;
+}
+
+.container .shipping .card .card-body .card-buttons .card-input .number-input:focus {
+  outline: none;
 }
 /*# sourceMappingURL=custom.css.map */
