@@ -1,14 +1,11 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 html {
   font-size: 62.5%;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
 }
 
 .container {
@@ -29,23 +26,28 @@ body {
 .container .shipping {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[2] 1.5fr;
-      grid-template-rows: repeat(2, 1fr) 1.5fr;
+  -ms-grid-rows: (1fr)[2] 1.2fr;
+      grid-template-rows: repeat(2, 1fr) 1.2fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+  border-radius: 12px;
+  max-width: 38rem;
+  height: 49rem;
   background-color: #F2F2F2;
 }
 
 .container .shipping .card {
-  max-width: 26.6rem;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-self: center;
-  margin: 1rem;
   gap: 2rem;
 }
 
 .container .shipping .card .card-img {
-  min-width: 12.5rem;
+  width: 12.5rem;
   border-radius: 13px;
 }
 
@@ -104,16 +106,45 @@ body {
   border: none;
   background: #E0E0E0;
   color: #828282;
+  cursor: pointer;
 }
 
-.container .shipping .card .card-body .card-buttons .card-input .number-input {
+.container .shipping .card .card-body .card-buttons .number-input {
+  font-weight: bold;
+  text-align: center;
   width: 3rem;
   background: transparent;
   border: none;
-  text-align: center;
 }
 
-.container .shipping .card .card-body .card-buttons .card-input .number-input:focus {
+.container .shipping .card .card-body .card-buttons .number-input:focus {
   outline: none;
+}
+
+.container .shipping .card:first-child {
+  margin-top: 3rem;
+}
+
+.container .shipping .resumen-price {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.container .shipping .resumen-price .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.4rem;
+  color: #333333;
+  border-top: 1px solid #BDBDBD;
+  padding: 1.3rem 0 1.3rem 0;
+}
+
+.container .shipping .resumen-price .total span {
+  font-weight: bold;
 }
 /*# sourceMappingURL=custom.css.map */

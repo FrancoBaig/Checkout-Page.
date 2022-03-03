@@ -40,15 +40,14 @@
             </div>
             <div class="card-buttons">
               <!-- Minus button -->
-              <button class="card-btn">-</button>
+              <button class="card-btn decrease">-</button>
 
               <!-- Input  -->
-              <div class="card-input">
-                <input type="text" class="number-input">
-              </div>
+                <input type="text" class="number-input" value="1">
+
 
               <!-- Plus button -->
-              <button class="card-btn">+</button>
+              <button class="card-btn increase">+</button>
             </div>
           </div>
         </div>
@@ -63,31 +62,34 @@
             </div>
             <div class="card-buttons">
               <!-- Minus button -->
-              <button class="card-btn">-</button>
+              <button class="card-btn decrease">-</button>
 
               <!-- Input  -->
-              <div class="card-input">
-                <input type="text" class="number-input">
-              </div>
+
+              <input type="text" class="number-input" value="1">
 
               <!-- Plus button -->
-              <button class="card-btn">+</button>
+              <button class="card-btn increase">+</button>
             </div>
           </div>
         </div>
 
-        <div class="total">
-          <h3>Shipping </h3>
-          <span>$19 Quiero que cambie auto</span>
-        </div>
-
-        <div class="total">
-          <h3>Total </h3>
-          <span>$19 Quiero que cambie auto</span>
+        <div class="resumen-price">
+          <div class="total">
+            <h3>Shipping </h3>
+            <span id="shipping-price">$19</span>
+          </div>
+  
+          <div class="total">
+            <h3> Total </h3>
+            <span id="total-price">$149</span>
+          </div>
         </div>
 
       </div>
     </section>
   </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
