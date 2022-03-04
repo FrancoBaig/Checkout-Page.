@@ -149,6 +149,14 @@ html {
   font-weight: bold;
 }
 
+.container .formularios .form-section .last-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (calc(50% - (2.5rem / 2)))[2];
+      grid-template-columns: repeat(2, calc(50% - (2.5rem / 2)));
+  gap: 2.5rem;
+}
+
 .container .formularios .form-section .form-title {
   font-size: 1.4rem;
   color: #333333;

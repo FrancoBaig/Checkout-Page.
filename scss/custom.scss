@@ -164,7 +164,17 @@ html {
     }
 
     .formularios{
+
         .form-section{
+
+            .last-form{
+                display: grid;
+
+                // 50% - (gap/2)
+                grid-template-columns: repeat(2, calc(50% - (2.5rem / 2)));
+                gap: 2.5rem;
+            }
+
             .form-title{
                 // estilos del título
                 font-size: 1.4rem;
