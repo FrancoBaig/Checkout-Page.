@@ -149,12 +149,23 @@ html {
   font-weight: bold;
 }
 
+.container .formularios {
+  max-width: 46.5rem;
+}
+
 .container .formularios .form-section .last-form {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (calc(50% - (2.5rem / 2)))[2];
-      grid-template-columns: repeat(2, calc(50% - (2.5rem / 2)));
-  gap: 2.5rem;
+  -ms-grid-columns: (calc(50% - (1rem / 2)))[2];
+      grid-template-columns: repeat(2, calc(50% - (1rem / 2)));
+  gap: 1rem;
+}
+
+.container .formularios .form-section .last-form .form-group select {
+  height: 4.3rem;
+  background: transparent;
+  margin-right: 1rem;
+  color: #828282;
 }
 
 .container .formularios .form-section .form-title {
@@ -184,7 +195,7 @@ html {
   max-width: 46rem;
   height: 4rem;
   border-radius: 12px;
-  border-color: #828282;
+  border: 1px solid #828282;
 }
 
 .container .formularios .form-section .form-group .material-icons {
@@ -192,5 +203,75 @@ html {
   left: 1rem;
   top: 4.3rem;
   color: #828282;
+}
+
+.container .formularios .form-group-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+  margin-top: 2rem;
+}
+
+.container .formularios .form-group-checkbox input[type="checkbox"] {
+  width: 2rem;
+  height: 2rem;
+  border-color: #828282;
+}
+
+.container .formularios .form-group-checkbox label {
+  font-size: 1.2rem;
+  color: #4F4F4F;
+}
+
+.container .formularios .final-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-top: 2.5rem;
+}
+
+.container .formularios .final-button .continue-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 16.6rem;
+  height: 5.4rem;
+  background-color: #F2994A;
+  border-radius: 12px;
+}
+
+.container .formularios .final-button .continue-btn a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+}
+
+.container .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #BDBDBD;
+  font-size: 1.4rem;
+  margin: 10rem 0 2rem 0;
+}
+
+.container .footer span {
+  font-weight: bold;
 }
 /*# sourceMappingURL=custom.css.map */
