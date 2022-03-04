@@ -5,15 +5,17 @@ $p-font: 'Montserrat', sans-serif;
 $title-color: #4E5150;
 $compra-color: #F2F2F2;
 $orange: #F2994A;
-$card-border-cl: #828282;
+$light-grey: #828282;
 $text-grey1: #333333;
 $border-color: #BDBDBD;
+$form-text-cl: #4F4F4F;
 
 
 * {
     padding: 0;
     margin: 0;
     font-family: $p-font;
+    font-weight: 600;
 }
 
 html {
@@ -91,7 +93,7 @@ html {
                     height: 5rem;
 
                     // Borde botones
-                    border: solid 1px $card-border-cl;
+                    border: solid 1px $light-grey;
                     border-radius: 12px;
 
                     .card-btn {
@@ -107,7 +109,7 @@ html {
                         // Estilos del botón
                         border: none;
                         background: #E0E0E0; 
-                        color: #828282;
+                        color: #light-grey;
                         cursor: pointer;
                     }
 
@@ -158,6 +160,133 @@ html {
                     font-weight: bold;
                 }
             }
+        }
+    }
+
+    .formularios{
+        max-width: 46.5rem;
+        .form-section{
+
+            .last-form{
+                display: grid;
+
+                // 50% - (gap/2)
+                grid-template-columns: repeat(2, calc(50% - (1rem / 2)));
+                gap: 1rem;
+
+                .form-group select{
+                    height: 4.3rem;
+                    background: transparent;
+
+                    margin-right: 1rem;
+
+                    color: $light-grey;
+                }
+
+            }
+
+            .form-title{
+                // estilos del título
+                font-size: 1.4rem;
+                color: $text-grey1;
+
+                padding-top: 4rem;
+            }
+
+            .form-group{
+                // Acomodar uno debajo del otro
+                display: flex;
+                flex-direction: column;
+
+                // position relative
+                position: relative;
+
+                label {
+                    color: $form-text-cl;
+                    margin: 1.5rem 0 0.5rem 0
+                }
+
+                .form-input {
+                    // Posición para que entre el icono
+                    padding-left: 4rem;
+
+                    // Estilos del input
+                    max-width: 46rem;
+                    height: 4rem;
+
+                    border-radius: 12px;
+                    border: 1px solid $light-grey;
+                }
+
+                .material-icons{
+                    // Posición del icon
+                    position: absolute;
+                    left: 1rem;
+                    top: 4.3rem;
+
+                    color: $light-grey
+                }
+            }
+        }
+
+        .form-group-checkbox{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            margin-top: 2rem;
+
+            input[type="checkbox"]{
+                width: 2rem;
+                height: 2rem;
+
+                border-color: #828282;
+            }
+
+            label{
+                font-size: 1.2rem;
+                color: #4F4F4F;
+            }
+        }
+
+        .final-button{
+            display: flex;
+            justify-content:right;
+
+            margin-top: 2.5rem;
+
+            .continue-btn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                width: 16.6rem;
+                height: 5.4rem;
+    
+                background-color: $orange;
+                border-radius: 12px;
+    
+                a{
+                    text-decoration: none;
+                    color: #FFFFFF;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        
+    }
+
+    .footer{
+        display: flex;
+        justify-content: center;
+
+        color: #BDBDBD;
+        font-size: 1.4rem;
+
+        margin: 10rem 0 2rem 0;
+
+        span {
+            font-weight: bold;
         }
     }
 }
