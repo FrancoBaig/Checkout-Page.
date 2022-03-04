@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 
 html {
@@ -105,7 +106,7 @@ html {
   height: 2rem;
   border: none;
   background: #E0E0E0;
-  color: #828282;
+  color: #light-grey;
   cursor: pointer;
 }
 
@@ -146,5 +147,42 @@ html {
 
 .container .shipping .resumen-price .total span {
   font-weight: bold;
+}
+
+.container .formularios .form-section .form-title {
+  font-size: 1.4rem;
+  color: #333333;
+  padding-top: 4rem;
+}
+
+.container .formularios .form-section .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.container .formularios .form-section .form-group label {
+  color: #4F4F4F;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.container .formularios .form-section .form-group .form-input {
+  padding-left: 4rem;
+  max-width: 46rem;
+  height: 4rem;
+  border-radius: 12px;
+  border-color: #828282;
+}
+
+.container .formularios .form-section .form-group .material-icons {
+  position: absolute;
+  left: 1rem;
+  top: 4.3rem;
+  color: #828282;
 }
 /*# sourceMappingURL=custom.css.map */

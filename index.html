@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,19 +9,20 @@
 
   <!-- Page icon -->
   <link rel="shortcut icon" href="images/devchallenges.png" type="image/x-icon">
-  
+
 
   <!-- font links -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet"> 
-  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- CSS custom link -->
   <link rel="stylesheet" href="css/custom.css">
 
-  
+
 </head>
+
 <body>
   <div class="container">
     <header class="header">
@@ -43,7 +45,7 @@
               <button class="card-btn decrease">-</button>
 
               <!-- Input  -->
-                <input type="text" class="number-input" value="1">
+              <input type="text" class="number-input" value="1">
 
 
               <!-- Plus button -->
@@ -79,7 +81,7 @@
             <h3>Shipping </h3>
             <span id="shipping-price">$19</span>
           </div>
-  
+
           <div class="total">
             <h3> Total </h3>
             <span id="total-price">$149</span>
@@ -88,8 +90,92 @@
 
       </div>
     </section>
+
+    <form class="formularios">
+      <div class="form-section">
+        <!-- Section title -->
+        <h2 class="form-title">Contact infomation</h2>
+
+        <!-- email -->
+        <div class="form-group">
+          <!-- input -->
+          <label for="email">E-mail</label>
+          <input type="text" class="form-input" id="email" placeholder="Enter your email...">
+
+          <!-- icon -->
+          <span class="material-icons">
+            email
+          </span>
+
+        </div>
+
+        <!-- phone -->
+        <div class="form-group">
+          <!-- input -->
+          <label for="phone">Phone</label>
+          <input type="text" class="form-input" id="phone" placeholder="Enter your phone...">
+
+          <!-- icon -->
+          <span class="material-icons">
+            call
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="form-section">
+        <!-- Section title -->
+        <h2 class="form-title">Shipping address</h2>
+
+        <!-- name -->
+        <div class="form-group">
+          <!-- input -->
+          <label for="full-name">Full name</label>
+          <input type="text" class="form-input" id="full-name" placeholder="Your name...">
+
+          <!-- icon -->
+          <span class="material-icons">
+            account_circle
+          </span>
+
+        </div>
+
+        <!-- Address -->
+        <div class="form-group">
+          <!-- input -->
+          <label for="address">Address</label>
+          <input type="text" class="form-input" id="address" placeholder="Your address..">
+
+          <!-- icon -->
+          <span class="material-icons">
+            home
+          </span>
+
+        </div>
+
+        <!-- City -->
+        <div class="form-group">
+          <!-- input -->
+          <label for="city">City</label>
+          <input type="text" class="form-input" id="city" placeholder="Your city..">
+
+          <!-- icon -->
+          <span class="material-icons">
+            apartment
+            </span>
+
+        </div>
+
+      </div>
+
+    </form>
+
+
   </div>
 
   <script src="js/script.js"></script>
 </body>
+
 </html>
