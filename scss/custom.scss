@@ -25,6 +25,8 @@ html {
 .container{
     width: 93.6%;
     margin: 0 auto;
+    max-width: 1200px;
+
 
     .header {
         margin: 3rem 0 2.4rem 0;
@@ -36,246 +38,254 @@ html {
         }
     }
     
-    .shipping {
-        display: grid;
-        grid-template-rows: repeat(2, 1fr) 1.2fr;
-        justify-content: center;
-        gap: 3rem;
-
-        border-radius: 12px;
-
-        max-width: 38rem;
-        height: 49rem;
+    .content{
         
-        background-color: $compra-color;
-
-        .card {
-            // max-width: 26.6rem;
-            width: 90%;
-
-            display: flex;
-            gap: 2rem;
-
-            .card-img {
-                width: 12.5rem;
-                border-radius: 13px;
-            }
-
-            .card-body {
-                .card-title {
-                    font-size: 1.2rem;
-                    color: $title-color;
-                }
-
-                .card-prices {
-                    display: flex;
-                    gap: 1.4rem;
-                    margin: 1.4rem 0 3.3rem 0;
-
-                    .discount-price{
-                        color: $orange;
-                        font-size: 1.4rem;
-                    }
-
-                    .full-price{
-                        align-self: center;
-                    }
-                }
-
-                .card-buttons{
-                    // display de los botones
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-evenly;
-
-                    // Ancho y alto del recuadro de botones
+        .shipping {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr) 1.2fr;
+            justify-content: center;
+            gap: 3rem;
+            min-width: 30rem;
+    
+            margin: 0 auto;
+    
+            border-radius: 12px;
+    
+            max-width: 38rem;
+            height: 49rem;
+            
+            background-color: $compra-color;
+    
+    
+            .card {
+                // max-width: 26.6rem;
+                width: 90%;
+    
+                display: flex;
+                gap: 2rem;
+    
+                .card-img {
                     width: 12.5rem;
-                    height: 5rem;
-
-                    // Borde botones
-                    border: solid 1px $light-grey;
-                    border-radius: 12px;
-
-                    .card-btn {
-                        // Ordenar el + y - dentro del botón
+                    border-radius: 13px;
+                }
+    
+                .card-body {
+                    .card-title {
+                        font-size: 1.2rem;
+                        color: $title-color;
+                    }
+    
+                    .card-prices {
+                        display: flex;
+                        gap: 1.4rem;
+                        margin: 1.4rem 0 3.3rem 0;
+    
+                        .discount-price{
+                            color: $orange;
+                            font-size: 1.4rem;
+                        }
+    
+                        .full-price{
+                            align-self: center;
+                        }
+                    }
+    
+                    .card-buttons{
+                        // display de los botones
                         display: flex;
                         align-items: center;
-                        justify-content: center;
-
-                        // ancho y alto del bot´´on
-                        width: 2rem;
-                        height: 2rem;
-
-                        // Estilos del botón
-                        border: none;
-                        background: #E0E0E0; 
-                        color: #light-grey;
-                        cursor: pointer;
-                    }
-
-                    
-                    .number-input {
-                            // Estilos del input de compras
-                            font-weight: bold;
-                            text-align: center;
-                        
-                            width: 3rem;
-
-                            background: transparent;
+                        justify-content: space-evenly;
+    
+                        // Ancho y alto del recuadro de botones
+                        width: 12.5rem;
+                        height: 5rem;
+    
+                        // Borde botones
+                        border: solid 1px $light-grey;
+                        border-radius: 12px;
+    
+                        .card-btn {
+                            // Ordenar el + y - dentro del botón
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+    
+                            // ancho y alto del bot´´on
+                            width: 2rem;
+                            height: 2rem;
+    
+                            // Estilos del botón
                             border: none;
-
-                            // quitar el bordel del input cuando se escribe
-                            &:focus{
-                                outline: none;
-                            }
+                            background: #E0E0E0; 
+                            color: #light-grey;
+                            cursor: pointer;
+                        }
+    
+                        
+                        .number-input {
+                                // Estilos del input de compras
+                                font-weight: bold;
+                                text-align: center;
+                            
+                                width: 3rem;
+    
+                                background: transparent;
+                                border: none;
+    
+                                // quitar el bordel del input cuando se escribe
+                                &:focus{
+                                    outline: none;
+                                }
+                        }
+                        
                     }
+                }
+    
+                &:first-child{
+                    margin-top: 3rem;
+                }
+            }
+    
+            .resumen-price{
+                // Hacer que el resumen se ponga en la parte baja
+                align-self: end;
+    
+                .total{
+                    // Separar los elementos
+                    display: flex;
+                    justify-content: space-between;
+    
+                    // Estilos del texto
+                    font-size: 1.4rem;
+                    color: #333333;
                     
+                    // Borde superior
+                    border-top: 1px solid $border-color;
+                    padding: 1.3rem 0 1.3rem 0;
+                    
+                    // poner los precios en bold
+                    span{
+                        font-weight: bold;
+                    }
                 }
             }
-
-            &:first-child{
-                margin-top: 3rem;
-            }
         }
-
-        .resumen-price{
-            // Hacer que el resumen se ponga en la parte baja
-            align-self: end;
-
-            .total{
-                // Separar los elementos
+    
+        .formularios{
+            max-width: 46.5rem;
+            .form-section{
+    
+                .last-form{
+                    display: grid;
+    
+                    // 50% - (gap/2)
+                    grid-template-columns: repeat(2, calc(50% - (1rem / 2)));
+                    gap: 1rem;
+    
+                    .form-group select{
+                        height: 4.3rem;
+                        background: transparent;
+    
+                        margin-right: 1rem;
+    
+                        color: $light-grey;
+                    }
+    
+                }
+    
+                .form-title{
+                    // estilos del título
+                    font-size: 1.4rem;
+                    color: $text-grey1;
+    
+                    padding-top: 4rem;
+                }
+    
+                .form-group{
+                    // Acomodar uno debajo del otro
+                    display: flex;
+                    flex-direction: column;
+    
+                    // position relative
+                    position: relative;
+    
+                    label {
+                        color: $form-text-cl;
+                        margin: 1.5rem 0 0.5rem 0
+                    }
+    
+                    .form-input {
+                        // Posición para que entre el icono
+                        padding-left: 4rem;
+    
+                        // Estilos del input
+                        max-width: 46rem;
+                        height: 4rem;
+    
+                        border-radius: 12px;
+                        border: 1px solid $light-grey;
+                    }
+    
+                    .material-icons{
+                        // Posición del icon
+                        position: absolute;
+                        left: 1rem;
+                        top: 4.3rem;
+    
+                        color: $light-grey
+                    }
+                }
+            }
+    
+            .form-group-checkbox{
                 display: flex;
-                justify-content: space-between;
-
-                // Estilos del texto
-                font-size: 1.4rem;
-                color: #333333;
-                
-                // Borde superior
-                border-top: 1px solid $border-color;
-                padding: 1.3rem 0 1.3rem 0;
-                
-                // poner los precios en bold
-                span{
-                    font-weight: bold;
-                }
-            }
-        }
-    }
-
-    .formularios{
-        max-width: 46.5rem;
-        .form-section{
-
-            .last-form{
-                display: grid;
-
-                // 50% - (gap/2)
-                grid-template-columns: repeat(2, calc(50% - (1rem / 2)));
-                gap: 1rem;
-
-                .form-group select{
-                    height: 4.3rem;
-                    background: transparent;
-
-                    margin-right: 1rem;
-
-                    color: $light-grey;
-                }
-
-            }
-
-            .form-title{
-                // estilos del título
-                font-size: 1.4rem;
-                color: $text-grey1;
-
-                padding-top: 4rem;
-            }
-
-            .form-group{
-                // Acomodar uno debajo del otro
-                display: flex;
-                flex-direction: column;
-
-                // position relative
-                position: relative;
-
-                label {
-                    color: $form-text-cl;
-                    margin: 1.5rem 0 0.5rem 0
-                }
-
-                .form-input {
-                    // Posición para que entre el icono
-                    padding-left: 4rem;
-
-                    // Estilos del input
-                    max-width: 46rem;
-                    height: 4rem;
-
-                    border-radius: 12px;
-                    border: 1px solid $light-grey;
-                }
-
-                .material-icons{
-                    // Posición del icon
-                    position: absolute;
-                    left: 1rem;
-                    top: 4.3rem;
-
-                    color: $light-grey
-                }
-            }
-        }
-
-        .form-group-checkbox{
-            display: flex;
-            align-items: center;
-            gap: .5rem;
-
-            margin-top: 2rem;
-
-            input[type="checkbox"]{
-                width: 2rem;
-                height: 2rem;
-
-                border-color: #828282;
-            }
-
-            label{
-                font-size: 1.2rem;
-                color: #4F4F4F;
-            }
-        }
-
-        .final-button{
-            display: flex;
-            justify-content:right;
-
-            margin-top: 2.5rem;
-
-            .continue-btn{
-                display: flex;
-                justify-content: center;
                 align-items: center;
+                gap: .5rem;
     
-                width: 16.6rem;
-                height: 5.4rem;
+                margin-top: 2rem;
     
-                background-color: $orange;
-                border-radius: 12px;
+                input[type="checkbox"]{
+                    width: 2rem;
+                    height: 2rem;
     
-                a{
-                    text-decoration: none;
-                    color: #FFFFFF;
-                    font-size: 1.6rem;
+                    border-color: #828282;
+                }
+    
+                label{
+                    font-size: 1.2rem;
+                    color: #4F4F4F;
                 }
             }
+    
+            .final-button{
+                display: flex;
+                justify-content:right;
+    
+                margin-top: 2.5rem;
+    
+                .continue-btn{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+        
+                    width: 16.6rem;
+                    height: 5.4rem;
+        
+                    background-color: $orange;
+                    border-radius: 12px;
+        
+                    a{
+                        text-decoration: none;
+                        color: #FFFFFF;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            
         }
+    
         
     }
-
     .footer{
         display: flex;
         justify-content: center;
@@ -289,4 +299,20 @@ html {
             font-weight: bold;
         }
     }
+    
 }
+
+@media (min-width: 823px){
+    .content{
+        display: grid;
+        grid-template-areas: "form shipping";
+
+        .shipping {
+            grid-area: shipping;
+        }
+
+        .formularios{
+            grid-area: form;
+        }
+    }
+ }
