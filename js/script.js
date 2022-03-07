@@ -1,95 +1,111 @@
-const products = [
-    {
-        id: 1,
-        name: "Vintage Backbag",
-        img: "images/photo1.png",
-        discount: 54.99,
-        full: 94.99,
-        number: 1
-    },
-    {
-        id: 2,
-        name: "Levi Shoes",
-        img: "images/photo2.png",
-        discount: 74.99,
-        full: 124.99,
-        number: 1
-    }
-]
+const cards = document.querySelectorAll('.card');
+const precioTotal = document.getElementById('total-price');
+const cardButtons = document.querySelectorAll('.card-buttons');
+const inputs = document.querySelectorAll('.number-input');
 
 
+window.addEventListener('DOMContentLoaded', function (){
+    // Inicial price
+    calcularPrecios()
 
-const shipping = document.querySelector('.shipping');
+    // Buttons
+    buttonsIncDec()
+    
+    // Input
+    inputCalc()
+});
 
+function calcularPrecios(){
+    let finalPrice = 0;
+    cards.forEach((c)=>{
+        let cInput = c.querySelector('.number-input').value;
+        let cPrecio = c.querySelector('.discount-price').textContent.slice(1);
+        
+        finalPrice += cPrecio * cInput
+    })
 
+    precioTotal.textContent = `$${finalPrice}`
+}
 
-window.addEventListener('DOMContentLoaded', function () {
-    // impProductos()
-    SeleccionarCantidad();
-})
+function buttonsIncDec(){
+    cardButtons.forEach((bntBox) => {
+        bntBox.addEventListener('click', (e) =>{
+            let el = e.target.classList;
+            let input = bntBox.querySelector('.number-input')
+        
 
-// function impProductos() {
-//     let a = products.map(function (product) {
-//         return `<div class="card">
-//                     <img src="${product.img}" alt="${product.name}" class="card-img">
-//                     <div class="card-body">
-//                     <h3 class="card-title">${product.name}</h3>
-//                     <div class="card-prices">
-//                         <p class="discount-price">$${product.discount}</p>
-//                         <del class="full-price">$${product.full}</del>
-//                     </div>
-//                     <div class="card-buttons">
-//                         <!-- Minus button -->
-//                         <button class="card-btn decrease">-</button>
-
-//                         <!-- Input  -->
-//                         <input type="text" class="number-input" value="1">
-
-//                         <!-- Plus button -->
-//                         <button class="card-btn increase">+</button>
-//                     </div>
-//                     </div>
-//                 </div>`
-//     }).join('')
-
-//     shipping.innerHTML = a;
-
-// }
-
-
-function SeleccionarCantidad() {
-    const cardBtns = document.querySelectorAll('.card-buttons');
-
-    cardBtns.forEach((btns) => {
-        let input = btns.querySelector('.number-input');
-
-
-        btns.addEventListener('click', function (a) {
-            let elem = a.target
-
-            if (elem.classList.contains('increase')) {
-                input.value++;
-            } else if (elem.classList.contains('decrease') && input.value > 1) {
-                input.value--;
+            if (el.contains('card-btn')){
+                if (el.contains('increase')){
+                    input.value ++;
+                } else if (input.value > 1){
+                    input.value --;
+                }
             }
 
-            chagePrice(btns, input.value)
-        });
-    });
+            calcularPrecios();
+        })
+    })
 }
 
-function chagePrice(btns, value){
-    const priceSpan = document.getElementById('total-price');
-
+function inputCalc(){
+    inputs.forEach((inp)=>{
+        inp.addEventListener('input', ()=>{
+            // hacer que no se pueda ingresar texto ni números menores a 1
+            if (isNaN(inp.value) || inp.value < 1){
+                inp.value = 1;
+            }
     
-    let priceUb = btns.parentNode.parentNode.querySelector('.discount-price')
-    let price = priceUb.innerHTML.slice(1);
-
-    let finalPrice = price * value;
-
-    priceSpan.innerHTML = finalPrice;
-
-
-    // priceSpan.innerHTML = `$${finalPrice}`;
-    
+            calcularPrecios();
+        })
+    })
 }
+
+// const shipping = document.querySelector('.shipping');
+
+
+// window.addEventListener('DOMContentLoaded', function () {
+//     SeleccionarCantidad();
+// })
+
+// const cardBtns = document.querySelectorAll('.card-buttons');
+
+// function SeleccionarCantidad() {
+//     cardBtns.forEach((btns) => {
+//         let input = btns.querySelector('.number-input');
+
+
+//         btns.addEventListener('click', function (a) {
+//             let elem = a.target
+
+//             if (elem.classList.contains('increase')) {
+//                 input.value++;
+//             } else if (elem.classList.contains('decrease') && input.value > 1) {
+//                 input.value--;
+//             }
+
+//             chagePrice(btns, input.value)
+//         });
+//     });
+// }
+
+// function chagePrice(btns, value){
+//     const priceSpan = document.getElementById('total-price');
+
+    
+//     let priceUb = btns.parentNode.parentNode.querySelector('.discount-price')
+//     let price = priceUb.innerHTML.slice(1);
+
+//     let finalPrice = price * value;
+
+//     priceSpan.innerHTML = finalPrice;
+
+
+//     // priceSpan.innerHTML = `$${finalPrice}`;
+    
+// }
+
+// function precioInicial(){
+//     cardBtns.forEach(()=>{
+
+//     })
+// }
