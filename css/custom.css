@@ -12,6 +12,7 @@ html {
 .container {
   width: 93.6%;
   margin: 0 auto;
+  max-width: 1200px;
 }
 
 .container .header {
@@ -24,7 +25,7 @@ html {
   color: #4E5150;
 }
 
-.container .shipping {
+.container .content .shipping {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[2] 1.2fr;
@@ -33,13 +34,15 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 3rem;
+  min-width: 30rem;
+  margin: 0 auto;
   border-radius: 12px;
   max-width: 38rem;
   height: 49rem;
   background-color: #F2F2F2;
 }
 
-.container .shipping .card {
+.container .content .shipping .card {
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,17 +50,17 @@ html {
   gap: 2rem;
 }
 
-.container .shipping .card .card-img {
+.container .content .shipping .card .card-img {
   width: 12.5rem;
   border-radius: 13px;
 }
 
-.container .shipping .card .card-body .card-title {
+.container .content .shipping .card .card-body .card-title {
   font-size: 1.2rem;
   color: #4E5150;
 }
 
-.container .shipping .card .card-body .card-prices {
+.container .content .shipping .card .card-body .card-prices {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,18 +68,18 @@ html {
   margin: 1.4rem 0 3.3rem 0;
 }
 
-.container .shipping .card .card-body .card-prices .discount-price {
+.container .content .shipping .card .card-body .card-prices .discount-price {
   color: #F2994A;
   font-size: 1.4rem;
 }
 
-.container .shipping .card .card-body .card-prices .full-price {
+.container .content .shipping .card .card-body .card-prices .full-price {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-.container .shipping .card .card-body .card-buttons {
+.container .content .shipping .card .card-body .card-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,7 +95,7 @@ html {
   border-radius: 12px;
 }
 
-.container .shipping .card .card-body .card-buttons .card-btn {
+.container .content .shipping .card .card-body .card-buttons .card-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,7 +113,7 @@ html {
   cursor: pointer;
 }
 
-.container .shipping .card .card-body .card-buttons .number-input {
+.container .content .shipping .card .card-body .card-buttons .number-input {
   font-weight: bold;
   text-align: center;
   width: 3rem;
@@ -118,21 +121,21 @@ html {
   border: none;
 }
 
-.container .shipping .card .card-body .card-buttons .number-input:focus {
+.container .content .shipping .card .card-body .card-buttons .number-input:focus {
   outline: none;
 }
 
-.container .shipping .card:first-child {
+.container .content .shipping .card:first-child {
   margin-top: 3rem;
 }
 
-.container .shipping .resumen-price {
+.container .content .shipping .resumen-price {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
 }
 
-.container .shipping .resumen-price .total {
+.container .content .shipping .resumen-price .total {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,15 +148,15 @@ html {
   padding: 1.3rem 0 1.3rem 0;
 }
 
-.container .shipping .resumen-price .total span {
+.container .content .shipping .resumen-price .total span {
   font-weight: bold;
 }
 
-.container .formularios {
+.container .content .formularios {
   max-width: 46.5rem;
 }
 
-.container .formularios .form-section .last-form {
+.container .content .formularios .form-section .last-form {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (calc(50% - (1rem / 2)))[2];
@@ -161,20 +164,20 @@ html {
   gap: 1rem;
 }
 
-.container .formularios .form-section .last-form .form-group select {
+.container .content .formularios .form-section .last-form .form-group select {
   height: 4.3rem;
   background: transparent;
   margin-right: 1rem;
   color: #828282;
 }
 
-.container .formularios .form-section .form-title {
+.container .content .formularios .form-section .form-title {
   font-size: 1.4rem;
   color: #333333;
   padding-top: 4rem;
 }
 
-.container .formularios .form-section .form-group {
+.container .content .formularios .form-section .form-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,12 +188,12 @@ html {
   position: relative;
 }
 
-.container .formularios .form-section .form-group label {
+.container .content .formularios .form-section .form-group label {
   color: #4F4F4F;
   margin: 1.5rem 0 0.5rem 0;
 }
 
-.container .formularios .form-section .form-group .form-input {
+.container .content .formularios .form-section .form-group .form-input {
   padding-left: 4rem;
   max-width: 46rem;
   height: 4rem;
@@ -198,14 +201,14 @@ html {
   border: 1px solid #828282;
 }
 
-.container .formularios .form-section .form-group .material-icons {
+.container .content .formularios .form-section .form-group .material-icons {
   position: absolute;
   left: 1rem;
   top: 4.3rem;
   color: #828282;
 }
 
-.container .formularios .form-group-checkbox {
+.container .content .formularios .form-group-checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -216,18 +219,18 @@ html {
   margin-top: 2rem;
 }
 
-.container .formularios .form-group-checkbox input[type="checkbox"] {
+.container .content .formularios .form-group-checkbox input[type="checkbox"] {
   width: 2rem;
   height: 2rem;
   border-color: #828282;
 }
 
-.container .formularios .form-group-checkbox label {
+.container .content .formularios .form-group-checkbox label {
   font-size: 1.2rem;
   color: #4F4F4F;
 }
 
-.container .formularios .final-button {
+.container .content .formularios .final-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -237,7 +240,7 @@ html {
   margin-top: 2.5rem;
 }
 
-.container .formularios .final-button .continue-btn {
+.container .content .formularios .final-button .continue-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,7 +256,7 @@ html {
   border-radius: 12px;
 }
 
-.container .formularios .final-button .continue-btn a {
+.container .content .formularios .final-button .continue-btn a {
   text-decoration: none;
   color: #FFFFFF;
   font-size: 1.6rem;
@@ -273,5 +276,23 @@ html {
 
 .container .footer span {
   font-weight: bold;
+}
+
+@media (min-width: 823px) {
+  .content {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "form shipping";
+  }
+  .content .shipping {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: shipping;
+  }
+  .content .formularios {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: form;
+  }
 }
 /*# sourceMappingURL=custom.css.map */
